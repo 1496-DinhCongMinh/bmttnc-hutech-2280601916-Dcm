@@ -1,0 +1,1 @@
+print("Đinh công Minh")

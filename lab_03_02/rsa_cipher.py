@@ -43,7 +43,8 @@ class MyApp(QMainWindow):
                 self.ui.txt_cipher_text.setPlainText(data["encrypted_message"])
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Information)
-                msg.setText("Encrypted Successfully")
+                # msg.setText("Encrypted Successfully 123")
+                msg.setText("Mã hóa thành công")
                 msg.exec_()
             else:
                 print("Error while calling API")
@@ -63,7 +64,8 @@ class MyApp(QMainWindow):
                 self.ui.txt_plain_text.setPlainText(data["decrypted_message"])
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Information)
-                msg.setText("Decrypted Successfully")
+                
+                msg.setText("Giải mã thành công")
                 msg.exec_()
             else:
                 print("Error while calling API")
@@ -82,7 +84,7 @@ class MyApp(QMainWindow):
                 self.ui.txt_sign_text.setPlainText(data["signature"])
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Information)
-                msg.setText("Signed Successfully")
+                msg.setText("Tao chu ky thanh cong")
                 msg.exec_()
             else:
                 print("Error while calling API")
@@ -102,12 +104,12 @@ class MyApp(QMainWindow):
                 if (data["is_verified"]):
                     msg = QMessageBox()
                     msg.setIcon(QMessageBox.Information)
-                    msg.setText("Verified Successfully")
+                    msg.setText("Xac nhan thanh cong")
                     msg.exec_()
                 else:
                     msg = QMessageBox()
                     msg.setIcon(QMessageBox.Information)
-                    msg.setText("Verified Fail")
+                    msg.setText("Xac nhan that bai")
                     msg.exec_()
             else:
                 print("Error while calling API")
